@@ -1,0 +1,88 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #ededed;
+    --text-color: #707070;
+    --main-color: #d92cf9;
+    --main-color2: #a3a3a3;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --main-color: #bb86fc;
+    --main-color2: #3a3a3a;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 62.5%; /* 1rem = 10px */
+    overflow-x: hidden;
+    transition: background-color 1.5s ease, color 1.5s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 4%;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin-left: 2rem;
+    display:inline-block;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    transform: scale(1.2);
+}
+
+.navbar a.active {
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.toggle-icon {
+    font-size: 1.4rem;
+    color: var(--main-color2);
+    cursor: pointer;
+}
+
+.toggle-icon:hover {
+    color: var(--main-color2);
+}
+
+
+section {
+    min-height: 90vh;
+    padding: 10rem 4% 2rem;
+    border: yellow solid 2px;
+}
