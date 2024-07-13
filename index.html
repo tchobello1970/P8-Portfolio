@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Yannick PRIOL</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -18,7 +18,6 @@
 <body>
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
-
         <nav class="navbar">
             <a href="#home" class="active">Accueil</a>
             <a href="#about">À&nbsp;propos</a>
@@ -26,19 +25,63 @@
             <a href="#services">Compétences</a>
             <a href="#projects">Projets</a>
             <a href="#contact">Contact</a>
+
             <a href="index-en.html"><span class="fi fi-gb"></span></a>
-            <a class="toggle-icon" id="toggle-dark-mode">
+            <a id="toggle-dark-mode">
                 <i id="moon-icon" class="fa-solid fa-moon"></i> <!-- Icône de lune -->
                 <i id="sun-icon" class="fa-regular fa-sun hidden"></i>
+            </a>
+            <a class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
             </a>
         </nav>
     </header>
 
     <section class="cl_home" id="home">
-
+        <div class="home_content">
+            <h2>Bonjour, je m'appelle</h2>
+            <h1>Yannick Priol</h1>
+            <h2>et je suis Développeur Web</h2>
+            <p>Bienvenue sur mon portfolio !</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/yannick-priol-44835b2b0/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/tchobello1970" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://twitter.com/PriolYannick" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://discord.com/channels/@tchobello" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            <a href="assets/images/CV YP 2024.pdf" target="_blank" class="btn" download ><i class="fa-solid fa-download"></i>&nbsp;Télécharger le CV</a>
+        </div>
+        <div class="home_img">
+            <img src="assets/images/Photo identité YP 2023.jpg" alt="photo-profil">             
+        </div>
     </section>
-    <section class="cl_about" id="about">
-        
+    
+    <!--SECTION A PROPOS-->
+
+    <section class="about" id="about_id"> 
+    <div class="about-content">
+        <h3>L'<span>informatique</span> et moi</h3>
+        <p>Initié rapidement aux joies de l'informatique par mon oncle, ingénieur féru de nouvelles technologies, j'ai toujours baigné dans ce milieu. <br>
+        J'ai croisé des BBC Acorn, Amstrad CPC, Atari ST, Amiga, PC et la joyeuse communauté qui va avec.<br>
+        Parallèlement à mes activités professionnelles, j'ai régulièrement programmé des adaptations de jeux de société dans différents langages :<br>
+        Assembleur 68000, Pascal, Actionscript, Python et finalement en PHP/Javascript sur la plateforme Board Game Arena.<br>
+        Cette dernière activité m'a donné envie de passer à l'étape supérieure : vivre de ma passion.</p>
+    </div>
+    <div class="about-hobbies">
+        <h3>Mes <span>passions</span></h3>
+        <div class="hobbies-grid" id="hobbiesGrid">
+            <div class="hobby-item" data-front="assets/images/tennis-de-table_image.jpg" data-back="assets/images/livres_image.jpg"></div>
+            <div class="hobby-item" data-front="assets/images/football_image.jpg" data-back="assets/images/jeux-de-societe_image.jpg"></div>
+            <div class="hobby-item" data-front="assets/images/snooker_image.jpg" data-back="assets/images/informatique_image.jpg"></div>
+            <div class="hobby-item" data-front="assets/images/science-fiction_image.jpg" data-back="assets/images/tennis_image.jpg"></div>
+            <div class="hobby-item" data-front="assets/images/darts_image.jpg" data-back="assets/images/tennis-de-table_image.jpg"></div>
+            <div class="hobby-item" data-front="assets/images/livres_image.jpg" data-back="assets/images/football_image.jpg"></div>
+            <div class="hobby-item" data-front="assets/images/jeux-de-societe_image.jpg" data-back="assets/images/snooker_image.jpg"></div>
+            <div class="hobby-item" data-front="assets/images/informatique_image.jpg" data-back="assets/images/science-fiction_image.jpg"></div>
+            <div class="hobby-item" data-front="assets/images/tennis_image.jpg" data-back="assets/images/darts_image.jpg"></div>
+        </div>
+    </div>
+</section>
     </section>
 
     <section class="cl_techno" id="techno">
