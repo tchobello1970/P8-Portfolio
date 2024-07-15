@@ -11,13 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
         sunIcon.classList.toggle('hidden');
     });
 
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+
+
+
     const hobbiesGrid = document.getElementById('hobbiesGrid');
     const hobbyItems = hobbiesGrid.querySelectorAll('.hobby-item');
 
     hobbyItems.forEach(item => {
         const frontImage = item.getAttribute('data-front');
         const backImage = item.getAttribute('data-back');
-
+        
         item.innerHTML = `
             <div class="flip-card-inner">
                 <div class="flip-card-front">
@@ -36,6 +45,49 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+
+
+    var clipboardIcon = document.getElementById('clipboard-icon');
+    var mailText = document.getElementById('email-text');
+    var mailCopyDiv = document.querySelector('.mail-copy');
+
+        document.getElementById('email-text').addEventListener('click', function() {
+        copyToClipboard(mailText.innerText); // adresse mail
+    });
+
+        clipboardIcon.addEventListener('click', function() {
+        copyToClipboard(mailText.innerText);
+    });
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text)
+            .then(function() {
+                clipboardIcon.classList.remove('fa-clipboard');
+                clipboardIcon.classList.add('fa-check-circle');
+                clipboardIcon.style.color = 'green';
+
+                var tempMessage = document.createElement('p');
+                tempMessage.textContent = 'Ajouté au presse-papiers';
+                tempMessage.style.color = 'green';
+                tempMessage.style.marginLeft = '10px';
+
+                clipboardIcon.insertAdjacentElement('afterend', tempMessage);
+
+                setTimeout(function() {
+                    clipboardIcon.classList.remove('fa-check-circle');
+                    clipboardIcon.classList.remove('fa-regular');
+                    clipboardIcon.classList.add('fa-clipboard');
+                    clipboardIcon.classList.add('fa-solid');
+                    clipboardIcon.style.color = 'var(--text-color)';
+
+                    mailCopyDiv.removeChild(tempMessage);
+                }, 2000);
+            })
+            .catch(function(err) {
+                console.error('Erreur lors de la copie dans le presse-papiers : ', err);
+            });
+    }
 
 } );
 

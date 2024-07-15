@@ -19,26 +19,27 @@
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
         <nav class="navbar">
-            <a href="#home" class="active">Accueil</a>
-            <a href="#about">À&nbsp;propos</a>
-            <a href="#techno">Technologies</a>
-            <a href="#services">Compétences</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
-
-            <a href="index-en.html"><span class="fi fi-gb"></span></a>
-            <a id="toggle-dark-mode">
-                <i id="moon-icon" class="fa-solid fa-moon"></i> <!-- Icône de lune -->
-                <i id="sun-icon" class="fa-regular fa-sun hidden"></i>
-            </a>
-            <a class="menu-btn">
-                <i class="fa-solid fa-bars"></i>
-            </a>
+            <div class="nav-links">
+                <a href="#home" class="active">Accueil</a>
+                <a href="#about">À propos</a>
+                <a href="#services">Compétences</a>
+                <a href="#projects">Projets</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <a id="toggle-dark-mode">
+                    <i id="moon-icon" class="fa-solid fa-moon"></i>
+                    <i id="sun-icon" class="fa-regular fa-sun hidden"></i>
+                </a>
+                <a class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
         </nav>
     </header>
 
-    <section class="cl_home" id="home">
-        <div class="home_content">
+    <section class="cl-home" id="home">
+        <div class="home-content">
             <h2>Bonjour, je m'appelle</h2>
             <h1>Yannick Priol</h1>
             <h2>et je suis Développeur Web</h2>
@@ -51,14 +52,14 @@
             </div>
             <a href="assets/images/CV YP 2024.pdf" target="_blank" class="btn" download ><i class="fa-solid fa-download"></i>&nbsp;Télécharger le CV</a>
         </div>
-        <div class="home_img">
+        <div class="home-img">
             <img src="assets/images/Photo identité YP 2023.jpg" alt="photo-profil">             
         </div>
     </section>
     
     <!--SECTION A PROPOS-->
 
-    <section class="about" id="about_id"> 
+    <section class="about" id="about-id"> 
     <div class="about-content">
         <h3>L'<span>informatique</span> et moi</h3>
         <p>Initié rapidement aux joies de l'informatique par mon oncle, ingénieur féru de nouvelles technologies, j'ai toujours baigné dans ce milieu. <br>
@@ -82,23 +83,43 @@
         </div>
     </div>
 </section>
-    </section>
 
-    <section class="cl_techno" id="techno">
+
+    <section class="cl-services" id="services">
         
     </section>
 
-    <section class="cl_services" id="services">
+    <section class="cl-projects" id="projects">
         
     </section>
 
-    <section class="cl_projects" id="projects">
-        
-    </section>
+    <section class="cl-contact" id="contact-id">
+    
+        <h3>Contactez moi !</h3>
 
-    <section class="cl_contact" id="contact">
-        
+        <div class="mail-copy">
+            <a href="mailto:yannickpriol@orange.fr?subject=Votre%20Objet&body=Votre%20Message">
+                <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <p id="email-text" class="email-text">yannickpriol@orange.fr</p>
+            <!-- Icône de presse-papiers Font Awesome -->
+            <i id="clipboard-icon" class="fa-regular fa-clipboard"></i>   
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/yannick-priol-44835b2b0/" target="_blank" class="icon-style"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/PriolYannick" target="_blank" class="icon-style"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://discord.com/channels/@tchobello" target="_blank" class="icon-style"><i class="fa-brands fa-discord"></i></a>
+        </div>
     </section>
+        
+        
+    
+        <!--FOOTER-->
+    
+    <footer>
+        <p>&copy; 2024 Yannick PRIOL | Tous droits réservés.</p>   
+        <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
 
     
 </body>
