@@ -8,12 +8,17 @@
 }
 
 :root {
-    --bg-color: #ededed;
-    --bg-color2: #323946;
-    --text-color: #90a070;
-    --main-color: #d92cf9;
-    --main-color2: #a3a3a3;
-    --shadow-color: rgba(0, 0, 0, 0.2); /* Couleur de l'ombre en mode clair */
+    --bg-color: #e8f2fe;
+    --bg-color2: #34495e;
+    --text-color: #333333;
+    --main-color: #2980b9;
+    --main-color2: #27ae60;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    --green-color: #aad59e;
+    --bleu-color: #9ab2d4;
+    --yellow-color: #fdd848;
+    --lila-color: #cdbcdb;
 }
 
 body {
@@ -33,17 +38,17 @@ h3{
     font-size: 1.2rem;
 }
 
-p{
+p, li{
     font-size: 1rem;
 }
 
 .dark-mode {
-    --bg-color: #121212;
-   /* --bg-color2: #323946;*/
-   /* --text-color: #e0e0e0;*/
-    --main-color: #bb86fc;
+    --bg-color: #071727;
+    --bg-color2: #34495e;
+    --text-color: #e0e0e0;
+    --main-color: #64ffda;
     --main-color2: #3a3a3a;
-    --shadow-color: rgba(255, 255, 255, 0.2); /* Couleur de l'ombre en mode sombre */
+    --shadow-color: rgba(255, 255, 255, 0.2);
 
 
 }
@@ -290,6 +295,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    animation: changeBackground 20s infinite;
 }
 
 .about-content {
@@ -387,6 +393,198 @@ section {
 }
 
 /* compétences part */
+
+.services {
+    background-color: var(--second-bg-color);
+    padding-bottom: 10em;
+}
+
+.services h2 {
+    margin-bottom: 5rem;
+}
+
+.services-container {
+    display: flex;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.services-container .services-box {
+    flex: 1 1 15rem;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 3rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    /*transform: scale(1.02);*/
+}
+
+.services-box i {
+    /*font-size: 4rem;*/
+    /*color: var(--main-color);*/
+    padding: 10px;
+}
+
+.services-box a {
+    display: none;
+}
+
+.services-box p {
+    display: block;
+    font-size: 1.2rem;
+    margin: 1rem 0 3rem;
+}
+
+.services-box h3 {
+    font-size: 2rem;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+}
+
+.mini-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.size{
+    font-size: 4rem;
+}
+
+.mini-size {
+    font-size: 2rem;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+@keyframes fade {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+.rotate {
+    animation: rotate 5s linear infinite;
+}
+.bounce {
+    animation: bounce 2s ease-in-out infinite;
+}
+.fade {
+    animation: fade 3s ease-in-out infinite;
+}
+.scale {
+    animation: scale 4s ease-in-out infinite;
+}
+.slide {
+    animation: slide 6s ease-in-out infinite alternate;
+}
+
+
+@keyframes changeBackground {
+    0% {
+      background-color: var(--lila-color);
+    }
+  
+    25% {
+      background-color: var(--bleu-color);
+    }
+  
+    50% {
+      background-color: var(--green-color);
+    }
+  
+    75% {
+      background-color: var(--yellow-color);
+    }
+  
+    100% {
+      background-color: var(--lila-color);
+    }
+  }
+
+
+.html5 {
+    color: #d35439;
+}
+
+.css3 {
+    color: #3972b6;
+}
+
+.js {
+    color: #e1c951;
+}
+
+.react {
+    color: #88dbf8;
+}
+
+.sass {
+    color: #c16c9b;
+}
+
+.node {
+    color: #6aa152;
+}
+
+.php {
+    color: #777BB3;
+}
+
+.mongodb {
+    color: green;
+}
+
+.java {
+    color: cornflowerblue;
+}
+
 
 
 /* contact */
