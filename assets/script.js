@@ -110,5 +110,38 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
+
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+    
+    // Fonction pour fermer la fenêtre modale
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+    
+    // Ajouter des événements aux icônes et aux boutons de fermeture
+    document.querySelectorAll('.fa-question-circle').forEach(function(element) {
+        element.onclick = function() {
+            var modalId = this.getAttribute('data-modal');
+            openModal(modalId);
+        }
+    });
+    
+    document.querySelectorAll('.close').forEach(function(element) {
+        element.onclick = function() {
+            var modalId = this.getAttribute('data-modal');
+            closeModal(modalId);
+        }
+    });
+    
+    // Fermer la fenêtre modale lorsque l'utilisateur clique en dehors de celle-ci
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            closeModal(event.target.id);
+        }
+    }
+
+
 } );
 

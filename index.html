@@ -16,8 +16,8 @@
 
 <body>
 
-    <div class="header-container">
-        <header class="header">
+    <header>
+        <div class="header-container">
             <a href="#" class="logo">Portfolio</a>
             <nav class="navbar">
                 <div class="nav-links">
@@ -28,20 +28,19 @@
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="nav-icons">
-                    <a id="toggle-dark-mode">
+                   <button id="toggle-dark-mode" aria-label="Toggle dark mode">
                         <i id="moon-icon" class="fa-solid fa-moon"></i>
                         <i id="sun-icon" class="fa-regular fa-sun hidden"></i>
-                    </a>
-                    <a class="menu-btn">
+                    </button>
+                    <button class="menu-btn" aria-label="Toggle navigation menu">
                         <i class="fa-solid fa-bars"></i>
-                    </a>
+                    </button>
                 </div>
             </nav>
-        </header>
-    </div>
-    <div class="content">
-
-
+        </div>
+    </header>
+    
+    <main>
         <section class="cl-home" id="home">
             <div class="home-content">
                 <h2>Bonjour, je m'appelle</h2>
@@ -61,10 +60,8 @@
             </div>
         </section>
         
-        <!--SECTION A PROPOS-->
-
         <section class="cl-about" id="about"> 
-            <div class="about-content">
+            <article class="about-content">
                 <h3>L'informatique et moi</h3>
                 <p>Initié rapidement aux joies de l'informatique par mon oncle, ingénieur féru de nouvelles technologies, j'ai toujours baigné dans ce milieu. <br>
                 J'ai croisé des BBC Acorn, Amstrad CPC, Atari ST, Amiga, PC et la joyeuse communauté qui va avec.<br>
@@ -72,13 +69,14 @@
                 Assembleur 68000, Pascal, Actionscript, Python et finalement en PHP/Javascript sur la plateforme Board Game Arena.<br>
                 Cette dernière activité m'a donné envie de passer à l'étape supérieure : vivre de ma passion.</p>
                 <h3>La formation</h3>
-                <li>Lors du cursus universitaire, beaucoup d'algorithmique, de bases de données en compagnie du Pascal, du C++, de l'ASM68k, du Lisp et du Prolog.</li>
-                <li>Une formation web pour maîtriser les nouvelles techniques de développement avec de l'HTML, CSS, MySQL, JAvascript, Java...</li>
-                <li>Très récemment, une nouvelle remise à niveau pour développer des sites web responsives et répondre au mieux aux attentes du métier (SEO, Méthode Agile...).</li>
+                <ul>
+                    <li>Lors du cursus universitaire, beaucoup d'algorithmique, de bases de données en compagnie du Pascal, du C++, de l'ASM68k, du Lisp et du Prolog.</li>
+                    <li>Une formation web pour maîtriser les nouvelles techniques de développement avec de l'HTML, CSS, MySQL, JAvascript, Java...</li>
+                    <li>Très récemment, une nouvelle remise à niveau pour développer des sites web responsives et répondre au mieux aux attentes du métier (SEO, Méthode Agile...).</li>
+                </ul>
                 <h3>Mes passions</h3>
-            </div>
-            <div class="about-hobbies">
-                
+            </article>
+            <aside class="about-hobbies">         
                 <div class="hobbies-grid" id="hobbiesGrid">
                     <div class="hobby-item" data-front="assets/images/tennis-de-table_image.jpg" data-back="assets/images/livres_image.jpg"></div>
                     <div class="hobby-item" data-front="assets/images/football_image.jpg" data-back="assets/images/jeux-de-societe_image.jpg"></div>
@@ -89,9 +87,8 @@
                     <div class="hobby-item" data-front="assets/images/jeux-de-societe_image.jpg" data-back="assets/images/science-fiction_image.jpg"></div>
                     <div class="hobby-item" data-front="assets/images/tennis_image.jpg" data-back="assets/images/darts_image.jpg"></div>
                 </div>
-            </div>
+            </aside>
         </section>
-
 
         <section class="cl-services" id="services">
             <div class="services-content">
@@ -108,25 +105,17 @@
                         <i class="fa-brands fa-html5 mini-size html5"></i>
                         <i class="fa-brands fa-css3-alt mini-size css3"></i>
                         <i class="fa-brands fa-sass mini-size sass"></i>
-                        <p class="services-description">
-                            Intégration à partir d'une maquette Figma<br>
-                            Implémentation d'une interface responsive<br>
-                            Optimisation du code grâce aux techniques Sass<br>
-                        </p>
-                        
+                        <p>Intégration à partir d'une maquette Figma</p>
+                        <p>Implémentation d'une interface responsive</p>
+                        <p>Optimisation du code grâce aux techniques Sass</p>
                         <i class="fa-brands fa-js mini-size js"></i>
-                        <p class="services-description">
-                            Manipulation d'éléments du DOM <br>
-                            Récupération de données utilisateurs via des formulaires<br>
-                            Gestion dynamique des évènements utilisateurs<br>
-                        </p>
-                        
+                        <p>Manipulation d'éléments du DOM</p>
+                        <p>Récupération de données utilisateurs via des formulaires</p>
+                        <p>Gestion dynamique des évènements utilisateurs</p>
                         <i class="fa-brands fa-react mini-size react"></i>
-                        <p class="services-description">
-                            Développement d'applications web réactives et dynamiques<br>
-                            Initialisation d'application avec Create React App<br>
-                            Navigation entre les pages avec React Router
-                        </p>
+                        <p>Développement d'applications web réactives et dynamiques</p>
+                        <p>Initialisation d'application avec Create React App</p>
+                        <p>Navigation entre les pages avec React Router</p>
                     </div>
                     <div class="services-box anim-2">
                         <i class="fa-brands fa-node-js size rotate node"></i>
@@ -135,35 +124,29 @@
                         <img src="assets/images/python.png" alt="Python Icon" class="icon slide python">
                         <h3>Back End</h3>
                         <i class="fa-brands fa-node-js mini-size node"></i>
-                        <p class="services-description">
-                            Implémentation d'un modèle logique de données<br>
-                            Création d'une API RESTful<br>
-                            Mise en oeuvre des opérations CRUD sécurisées<br>
-                            Stockage des données sécurisé
-                        </p>
+                        <p>Implémentation d'un modèle logique de données</p>
+                        <p>Création d'une API RESTful</p>
+                        <p>Mise en oeuvre des opérations CRUD sécurisées</p>
+                        <p>Stockage des données sécurisé</p>
                         <img src="assets/images/python.png" alt="Python Icon" class="mini-icon python">
                         <p class="services-description">Création d'une application pour le jeu Dungeon Twister</p>
-
                         <i class="fa-brands fa-php mini-size php"></i>
                         <img src="assets/images/mysql.png" alt="MySQL Icon" class="mini-icon mysql">
                         <i class="fa-brands fa-js mini-size js"></i>
                         <p class="services-description">Adaptations de jeux de société sur la plateforme BGA</p>
                     </div>
-        
                     <div class="services-box anim-3">
                         <i class="fa-solid fa-map size main-color"></i>
                         <h3>Développement web</h3>
-                        
-                            <img src="assets/images/chrome.png" alt="Google Icon" class="mini-icon">
-                            <img src="assets/images/firefox.png" alt="firefox Icon" class="mini-icon">
-                            <p class="services-description">Correction de bugs grâce aux inspecteurs</p>
-                            <img src="assets/images/lighthouse.png" alt="Lighthouse Icon" class="mini-icon">
-                            <p class="services-description">Audits de performances (GTMetrix, Lighthouse et Wave)</p>
-                            <img src="assets/images/schema-org.png" alt="Schema Icon" class="mini-icon">
-                            <p class="services-description">Référencement (Google Rich Snippet et Schema.org)</p>
+                        <img src="assets/images/chrome.png" alt="Google Icon" class="mini-icon">
+                        <img src="assets/images/firefox.png" alt="firefox Icon" class="mini-icon">
+                        <p class="services-description">Correction de bugs grâce aux inspecteurs</p>
+                        <img src="assets/images/lighthouse.png" alt="Lighthouse Icon" class="mini-icon">
+                        <p class="services-description">Audits de performances (GTMetrix, Lighthouse et Wave)</p>
+                        <img src="assets/images/schema-org.png" alt="Schema Icon" class="mini-icon">
+                        <p class="services-description">Référencement (Google Rich Snippet et Schema.org)</p>
                         </p>
                     </div>
-        
                     <div class="services-box anim-4">
                         <i class="fa-solid fa-screwdriver-wrench size main-color"></i>
                         <h3>Outils de développement</h3>
@@ -183,19 +166,197 @@
                     </div>
                 </div>
             </div>
-            
         </section>
 
         <section class="cl-projects" id="projects">
+            <h3>Mes projets</h3>
             <div class="projects-content">
-                <h3>Mes projets</h3>
+                <div class="card">
+                    <img src="assets/images/booki.jpg" alt="booki">
+                    <p>Booki - Site de réservation hôtelière</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <img src="assets/images/figma.png" alt="Figma Icon" class="mini-icon">
+                            <i class="fa-brands fa-html5 mini-size html5" id="html5"></i>
+                            <i class="fa-brands fa-css3-alt mini-size css3" id="css3"></i></div>
+                        <div class="links">
+                            <a href="https://github.com/tchobello1970/OC_P2_Booki" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/bluel.jpg" alt="bluel">
+                    <p>Sophie Bluel - Architecte d'intérieur</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <i class="fa-brands fa-js mini-size js"></i></div>
+                        <div class="links">
+                            <a href="https://github.com/tchobello1970/OC_P3_Bluel" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/carducci.jpg" alt="carducci">
+                    <p>Nina Carducci - Photographe freelance</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <i class="fa-brands fa-html5 mini-size js" id="js"></i>
+                            <img src="assets/images/lighthouse.png" alt="Lighthouse Icon" class="mini-icon">
+                            <img src="assets/images/schema-org.png" alt="Schema Icon" class="mini-icon">
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/tchobello1970/OC_P4_Carducci" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
+                            <a href="https://tchobello1970.github.io/OC_P4_Carducci/" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/kasa.jpg" alt="kasa">
+                    <p>Kasa - Location d'appartements</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <i class="fa-brands fa-react mini-size react"></i>
+                            <i class="fa-brands fa-sass mini-size sass"></i>
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/tchobello1970/kasa" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/grimoire.jpg" alt="grimoire">
+                    <p>Mon vieux grimoire - Notation de livres</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <i class="fa-brands fa-html5 mini-size js" id="js"></i>
+                            <i class="fa-brands fa-node-js mini-size node"></i>
+                            <img src="assets/images/swagger.png" alt="Swagger Icon" class="mini-icon">
+                            <img src="assets/images/postman.png" alt="Postman Icon" class="mini-icon">                           
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/tchobello1970/P6-grimoire-backend" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/qwenta.jpg" alt="qwenta">
+                    <p>Qwenta - Projet de menus pour restaurateurs</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <img src="assets/images/wakelet.png" alt="Wakelet Icon" class="mini-rect-icon">
+                            <img src="assets/images/feedly.png" alt="Feedly Icon" class="mini-rect-icon">
+                            <img src="assets/images/notion.png" alt="Feedly Icon" class="mini-icon">
+                            <img src="assets/images/figma.png" alt="Figma Icon" class="mini-icon">
+                        </div>
+                        <div class="links">
+                            <a href="https://www.notion.so/56c38cf285d245ac8e12fa1e9d72d3fd?v=42a1b0dbf8364edb8067c8d8b4107dcb" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="card">
+                    <img src="assets/images/portfolio.jpg" alt="portfolio">
+                    <p>Portfolio</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <i class="fa-brands fa-html5 mini-size html5" id="html5"></i>
+                            <i class="fa-brands fa-css3-alt mini-size css3" id="css3"></i>
+                            <i class="fa-brands fa-js mini-size js" id="js"></i>
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/tchobello1970/P8-Portfolio" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
+
+                            
+                            <a href="https://www.notion.so/56c38cf285d245ac8e12fa1e9d72d3fd?v=42a1b0dbf8364edb8067c8d8b4107dcb" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/dt_python.jpg" alt="python">
+                    <p>Remue-méninges Dungeon Twister</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <img src="assets/images/python.png" alt="Python Icon" class="mini-icon python">
+                        </div>
+                        <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_python"></i>
+                            <a href="https://github.com/tchobello1970/P8-Portfolio" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="card">
+                    <img src="assets/images/orion.jpg" alt="orion">
+                    <p>Orion Duel - Board Game Arena</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <i class="fa-brands fa-php mini-size php"></i>
+                            <img src="assets/images/mysql.png" alt="MySQL Icon" class="mini-icon mysql">
+                            <i class="fa-brands fa-js mini-size js" id="js"></i>
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/tchobello1970/OrionDuelHunt" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
+                            <a href="https://boardgamearena.com/gamepanel?game=orionduel" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/linx.jpg" alt="linx">
+                    <p>Linx - Board Game Arena</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <i class="fa-brands fa-php mini-size php"></i>
+                            <img src="assets/images/mysql.png" alt="MySQL Icon" class="mini-icon mysql">
+                            <i class="fa-brands fa-js mini-size js" id="js"></i>
+                        </div>
+                        <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_linx"></i>
+                            <a href="https://github.com/tchobello1970/linxhunt" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
+                            <a href="https://boardgamearena.com/gamepanel?game=linx" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/warchest.jpg" alt="warchest">
+                    <p>Champ d'Honneur - Board Game Arena</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <i class="fa-brands fa-php mini-size php"></i>
+                            <img src="assets/images/mysql.png" alt="MySQL Icon" class="mini-icon mysql">
+                            <i class="fa-brands fa-js mini-size js" id="js"></i>
+                        </div>
+                        <div class="links">
+                            <a href="https://boardgamearena.com/gamepanel?game=warchest" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
+                        </div>
+                    </div>
+                </div>            
+                <div class="card">
+                    <img src="assets/images/dungeontwister.jpg" alt="dungeontwister">
+                    <p>Dungeon Twister - Board Game Arena</p>
+                    <div class="logos-container">
+                        <div class="brands">
+                            <i class="fa-brands fa-php mini-size php"></i>
+                            <img src="assets/images/mysql.png" alt="MySQL Icon" class="mini-icon mysql">
+                            <i class="fa-brands fa-js mini-size js" id="js"></i>
+                        </div>
+                        <div class="links">
+                            <a href="https://boardgamearena.com/gamepanel?game=dungeontwister" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal_python" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_python">&times;</span>
+                        <p>Contenu de la fenêtre modale Python</p>
+                    </div>
+                </div>   
+                <div id="modal_linx" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_linx">&times;</span>
+                        <p>Contenu de la fenêtre modale Linx</p>
+                    </div>
+                </div>                                                                                  
             </div>
         </section>
-
-        <section class="cl-contact" id="contact-id">
         
+        <section class="cl-contact" id="contact-id">
             <h3>Contactez moi !</h3>
-
             <div class="mail-copy">
                 <a href="mailto:yannickpriol@orange.fr?subject=Votre%20Objet&body=Votre%20Message">
                     <i class="fa-solid fa-paper-plane"></i>
@@ -210,16 +371,11 @@
                 <a href="https://discord.com/channels/@tchobello" target="_blank" class="icon-style"><i class="fa-brands fa-discord"></i></a>
             </div>
         </section>
-            
-            
-        
-            <!--FOOTER-->
-        
+                  
         <footer>
             <p>&copy; 2024 Yannick PRIOL | Tous droits réservés.</p>   
             <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
         </footer>
-    </div>
-    
+    </main>    
 </body>
 </html>
