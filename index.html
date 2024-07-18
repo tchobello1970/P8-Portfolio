@@ -15,202 +15,211 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="navbar">
-            <div class="nav-links">
-                <a href="#home" class="active">Accueil</a>
-                <a href="#about">À propos</a>
-                <a href="#services">Compétences</a>
-                <a href="#projects">Projets</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="nav-icons">
-                <a id="toggle-dark-mode">
-                    <i id="moon-icon" class="fa-solid fa-moon"></i>
-                    <i id="sun-icon" class="fa-regular fa-sun hidden"></i>
-                </a>
-                <a class="menu-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
-            </div>
-        </nav>
-    </header>
 
-    <section class="cl-home" id="home">
-        <div class="home-content">
-            <h2>Bonjour, je m'appelle</h2>
-            <h1>Yannick Priol</h1>
-            <h2>et je suis Développeur Web</h2>
-            <p>Bienvenue sur mon portfolio !</p>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/yannick-priol-44835b2b0/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/tchobello1970" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://twitter.com/PriolYannick" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://discord.com/channels/@tchobello" target="_blank"><i class="fa-brands fa-discord"></i></a>
-            </div>
-            <a href="assets/images/CV YP 2024.pdf" target="_blank" class="btn" download ><i class="fa-solid fa-download"></i>&nbsp;Télécharger le CV</a>
-        </div>
-        <div class="home-img">
-            <img src="assets/images/Photo identité YP 2023.jpg" alt="photo-profil">             
-        </div>
-    </section>
-    
-    <!--SECTION A PROPOS-->
+    <div class="header-container">
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+            <nav class="navbar">
+                <div class="nav-links">
+                    <a href="#home" class="active">Accueil</a>
+                    <a href="#about">À propos</a>
+                    <a href="#services">Compétences</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="nav-icons">
+                    <a id="toggle-dark-mode">
+                        <i id="moon-icon" class="fa-solid fa-moon"></i>
+                        <i id="sun-icon" class="fa-regular fa-sun hidden"></i>
+                    </a>
+                    <a class="menu-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="content">
 
-    <section class="about" id="about-id"> 
-    <div class="about-content">
-        <h3>L'informatique et moi</h3>
-        <p>Initié rapidement aux joies de l'informatique par mon oncle, ingénieur féru de nouvelles technologies, j'ai toujours baigné dans ce milieu. <br>
-        J'ai croisé des BBC Acorn, Amstrad CPC, Atari ST, Amiga, PC et la joyeuse communauté qui va avec.<br>
-        Parallèlement à mes activités professionnelles, j'ai régulièrement programmé des adaptations de jeux de société dans différents langages :<br>
-        Assembleur 68000, Pascal, Actionscript, Python et finalement en PHP/Javascript sur la plateforme Board Game Arena.<br>
-        Cette dernière activité m'a donné envie de passer à l'étape supérieure : vivre de ma passion.</p>
-        <h3>La formation</h3>
-        <li>Lors du cursus universitaire, beaucoup d'algorithmique, de bases de données en compagnie du Pascal, du C++, de l'ASM68k, du Lisp et du Prolog.</li>
-        <li>Une formation web pour maîtriser les nouvelles techniques de développement avec de l'HTML, CSS, MySQL, JAvascript, Java...</li>
-        <li>Très récemment, une nouvelle remise à niveau pour développer des sites web responsives et répondre au mieux aux attentes du métier (SEO, Méthode Agile...).</li>
+
+        <section class="cl-home" id="home">
+            <div class="home-content">
+                <h2>Bonjour, je m'appelle</h2>
+                <h1>Yannick Priol</h1>
+                <h2>et je suis Développeur Web</h2>
+                <p>Bienvenue sur mon portfolio !</p>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/yannick-priol-44835b2b0/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/tchobello1970" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com/PriolYannick" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://discord.com/channels/@tchobello" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                </div>
+                <a href="assets/images/CV YP 2024.pdf" target="_blank" class="btn" download ><i class="fa-solid fa-download"></i>&nbsp;Télécharger le CV</a>
+            </div>
+            <div class="home-img">
+                <img src="assets/images/Photo identité YP 2023.jpg" alt="photo-profil">             
+            </div>
+        </section>
         
-    </div>
-    <div class="about-hobbies">
-        <h3>Mes <span>passions</span></h3>
-        <div class="hobbies-grid" id="hobbiesGrid">
-            <div class="hobby-item" data-front="assets/images/tennis-de-table_image.jpg" data-back="assets/images/livres_image.jpg"></div>
-            <div class="hobby-item" data-front="assets/images/football_image.jpg" data-back="assets/images/jeux-de-societe_image.jpg"></div>
-            <div class="hobby-item" data-front="assets/images/snooker_image.jpg" data-back="assets/images/informatique_image.jpg"></div>
-            <div class="hobby-item" data-front="assets/images/science-fiction_image.jpg" data-back="assets/images/tennis_image.jpg"></div>
-            <div class="hobby-item" data-front="assets/images/darts_image.jpg" data-back="assets/images/tennis-de-table_image.jpg"></div>
-            <div class="hobby-item" data-front="assets/images/livres_image.jpg" data-back="assets/images/football_image.jpg"></div>
-            <div class="hobby-item" data-front="assets/images/jeux-de-societe_image.jpg" data-back="assets/images/snooker_image.jpg"></div>
-            <div class="hobby-item" data-front="assets/images/informatique_image.jpg" data-back="assets/images/science-fiction_image.jpg"></div>
-            <div class="hobby-item" data-front="assets/images/tennis_image.jpg" data-back="assets/images/darts_image.jpg"></div>
-        </div>
-    </div>
-</section>
+        <!--SECTION A PROPOS-->
 
-
-    <section class="cl-services" id="services">
-        <div class="services-content">
-            <h3>Mes compétences</h3>
-            <div class="services-container">
-                <div class="services-box">
-                    <i class="fa-brands fa-html5 size scale html5"></i>
-                    <i class="fa-brands fa-css3-alt size slide css3"></i>
-                    <i class="fa-brands fa-sass size rotate sass"></i>
-                    <i class="fa-brands fa-js size fade js"></i>
-                    <i class="fa-brands fa-react size bounce react"></i>
-                    
-                    <h3>Front End</h3>
-                    <i class="fa-brands fa-html5 mini-size html5"></i>
-                    <i class="fa-brands fa-css3-alt mini-size css3"></i>
-                    <i class="fa-brands fa-sass mini-size sass"></i>
-                    <p class="services-description">
-                        Intégration à partir d'une maquette Figma<br>
-                        Implémentation d'une interface responsive<br>
-                        Optimisation du code grâce aux techniques Sass<br>
-                    </p>
-                    
-                    <i class="fa-brands fa-js mini-size js"></i>
-                    <p class="services-description">
-                        Manipulation d'éléments du DOM <br>
-                        Récupération de données utilisateurs via des formulaires<br>
-                        Gestion dynamique des évènements utilisateurs<br>
-                    </p>
-                    
-                    <i class="fa-brands fa-react mini-size react"></i>
-                    <p class="services-description">
-                        Développement d'applications web réactives et dynamiques<br>
-                        Initialisation d'application avec Create React App<br>
-                        Navigation entre les pages avec React Router
-                    </p>
+        <section class="cl-about" id="about"> 
+            <div class="about-content">
+                <h3>L'informatique et moi</h3>
+                <p>Initié rapidement aux joies de l'informatique par mon oncle, ingénieur féru de nouvelles technologies, j'ai toujours baigné dans ce milieu. <br>
+                J'ai croisé des BBC Acorn, Amstrad CPC, Atari ST, Amiga, PC et la joyeuse communauté qui va avec.<br>
+                Parallèlement à mes activités professionnelles, j'ai régulièrement programmé des adaptations de jeux de société dans différents langages :<br>
+                Assembleur 68000, Pascal, Actionscript, Python et finalement en PHP/Javascript sur la plateforme Board Game Arena.<br>
+                Cette dernière activité m'a donné envie de passer à l'étape supérieure : vivre de ma passion.</p>
+                <h3>La formation</h3>
+                <li>Lors du cursus universitaire, beaucoup d'algorithmique, de bases de données en compagnie du Pascal, du C++, de l'ASM68k, du Lisp et du Prolog.</li>
+                <li>Une formation web pour maîtriser les nouvelles techniques de développement avec de l'HTML, CSS, MySQL, JAvascript, Java...</li>
+                <li>Très récemment, une nouvelle remise à niveau pour développer des sites web responsives et répondre au mieux aux attentes du métier (SEO, Méthode Agile...).</li>
+                <h3>Mes passions</h3>
+            </div>
+            <div class="about-hobbies">
+                
+                <div class="hobbies-grid" id="hobbiesGrid">
+                    <div class="hobby-item" data-front="assets/images/tennis-de-table_image.jpg" data-back="assets/images/livres_image.jpg"></div>
+                    <div class="hobby-item" data-front="assets/images/football_image.jpg" data-back="assets/images/jeux-de-societe_image.jpg"></div>
+                    <div class="hobby-item" data-front="assets/images/snooker_image.jpg" data-back="assets/images/tennis_image.jpg"></div>
+                    <div class="hobby-item" data-front="assets/images/science-fiction_image.jpg" data-back="assets/images/tennis-de-table_image.jpg"></div>
+                    <div class="hobby-item" data-front="assets/images/darts_image.jpg" data-back="assets/images/football_image.jpg"></div>
+                    <div class="hobby-item" data-front="assets/images/livres_image.jpg" data-back="assets/images/snooker_image.jpg"></div>
+                    <div class="hobby-item" data-front="assets/images/jeux-de-societe_image.jpg" data-back="assets/images/science-fiction_image.jpg"></div>
+                    <div class="hobby-item" data-front="assets/images/tennis_image.jpg" data-back="assets/images/darts_image.jpg"></div>
                 </div>
-                <div class="services-box">
-                    <i class="fa-brands fa-node-js size rotate node"></i>
-                    <i class="fa-brands fa-php size bounce php"></i>
-                    <img src="assets/images/mysql.png" alt="MySQL Icon" class="icon fade mysql">
-                    <img src="assets/images/python.png" alt="Python Icon" class="icon slide python">
-                    <h3>Back End</h3>
-                    <i class="fa-brands fa-node-js mini-size node"></i>
-                    <p class="services-description">
-                        Implémentation d'un modèle logique de données<br>
-                        Création d'une API RESTful<br>
-                        Mise en oeuvre des opérations CRUD sécurisées<br>
-                        Stockage des données sécurisé
-                    </p>
-                    <img src="assets/images/python.png" alt="Python Icon" class="mini-icon python">
-                    <p class="services-description">Création d'une application pour le jeu Dungeon Twister</p>
+            </div>
+        </section>
 
-                    <i class="fa-brands fa-php mini-size php"></i>
-                    <img src="assets/images/mysql.png" alt="MySQL Icon" class="mini-icon mysql">
-                    <i class="fa-brands fa-js mini-size js"></i>
-                    <p class="services-description">Adaptations de jeux de société sur la plateforme BGA</p>
-                </div>
-    
-                <div class="services-box">
-                    <i class="fa-solid fa-map size"></i>
-                    <h3>Développement web</h3>
-                    
-                        <img src="assets/images/chrome.png" alt="Google Icon" class="mini-icon">
-                        <img src="assets/images/firefox.png" alt="firefox Icon" class="mini-icon">
+
+        <section class="cl-services" id="services">
+            <div class="services-content">
+                <h3>Mes compétences</h3>
+                <div class="services-container">
+                    <div class="services-box anim">
+                        <i class="fa-brands fa-html5 size scale html5"></i>
+                        <i class="fa-brands fa-css3-alt size slide css3"></i>
+                        <i class="fa-brands fa-sass size rotate sass"></i>
+                        <i class="fa-brands fa-js size fade js"></i>
+                        <i class="fa-brands fa-react size bounce react"></i>
                         
-                        
+                        <h3>Front End</h3>
+                        <i class="fa-brands fa-html5 mini-size html5"></i>
+                        <i class="fa-brands fa-css3-alt mini-size css3"></i>
+                        <i class="fa-brands fa-sass mini-size sass"></i>
                         <p class="services-description">
-                        Correction de bugs grâce aux inspecteurs.</p>
-                        <img src="assets/images/lighthouse.png" alt="Lighthouse Icon" class="mini-icon">
-                        <p class="services-description">Audits de performances (GTMetrix, Lighthouse et Wave).</p>
-                        <img src="assets/images/schema-org.png" alt="Schema Icon" class="mini-icon">
-                        <p class="services-description">Référencement (Google Rich Snippet et Schema.org).</p>
-                    </p>
-                </div>
-    
-                <div class="services-box">
-                    <i class="fa-solid fa-screwdriver-wrench size"></i>
-                    <h3>Outils de développement</h3>
-                    <p class="services-description">
-                        <span>Gestion de projets</span> - Méthode scrum, méthode agile, Kanban<br>
-                        <span>Suivi d'affaires</span> - Planification, Organisation<br>
-                        <span>Suivi financier</span> - Appel d'offres, comptabilité des entreprises <br>
-                        <span>Relation clients</span> - Déplacements, meetings, conférences, séminaires<br>
-                        <span>Leadership</span> - Maintien de cohésion de groupe, stages, formations <br>
-                    </p>
+                            Intégration à partir d'une maquette Figma<br>
+                            Implémentation d'une interface responsive<br>
+                            Optimisation du code grâce aux techniques Sass<br>
+                        </p>
+                        
+                        <i class="fa-brands fa-js mini-size js"></i>
+                        <p class="services-description">
+                            Manipulation d'éléments du DOM <br>
+                            Récupération de données utilisateurs via des formulaires<br>
+                            Gestion dynamique des évènements utilisateurs<br>
+                        </p>
+                        
+                        <i class="fa-brands fa-react mini-size react"></i>
+                        <p class="services-description">
+                            Développement d'applications web réactives et dynamiques<br>
+                            Initialisation d'application avec Create React App<br>
+                            Navigation entre les pages avec React Router
+                        </p>
+                    </div>
+                    <div class="services-box anim-2">
+                        <i class="fa-brands fa-node-js size rotate node"></i>
+                        <i class="fa-brands fa-php size bounce php"></i>
+                        <img src="assets/images/mysql.png" alt="MySQL Icon" class="icon fade mysql">
+                        <img src="assets/images/python.png" alt="Python Icon" class="icon slide python">
+                        <h3>Back End</h3>
+                        <i class="fa-brands fa-node-js mini-size node"></i>
+                        <p class="services-description">
+                            Implémentation d'un modèle logique de données<br>
+                            Création d'une API RESTful<br>
+                            Mise en oeuvre des opérations CRUD sécurisées<br>
+                            Stockage des données sécurisé
+                        </p>
+                        <img src="assets/images/python.png" alt="Python Icon" class="mini-icon python">
+                        <p class="services-description">Création d'une application pour le jeu Dungeon Twister</p>
+
+                        <i class="fa-brands fa-php mini-size php"></i>
+                        <img src="assets/images/mysql.png" alt="MySQL Icon" class="mini-icon mysql">
+                        <i class="fa-brands fa-js mini-size js"></i>
+                        <p class="services-description">Adaptations de jeux de société sur la plateforme BGA</p>
+                    </div>
+        
+                    <div class="services-box anim-3">
+                        <i class="fa-solid fa-map size main-color"></i>
+                        <h3>Développement web</h3>
+                        
+                            <img src="assets/images/chrome.png" alt="Google Icon" class="mini-icon">
+                            <img src="assets/images/firefox.png" alt="firefox Icon" class="mini-icon">
+                            <p class="services-description">Correction de bugs grâce aux inspecteurs</p>
+                            <img src="assets/images/lighthouse.png" alt="Lighthouse Icon" class="mini-icon">
+                            <p class="services-description">Audits de performances (GTMetrix, Lighthouse et Wave)</p>
+                            <img src="assets/images/schema-org.png" alt="Schema Icon" class="mini-icon">
+                            <p class="services-description">Référencement (Google Rich Snippet et Schema.org)</p>
+                        </p>
+                    </div>
+        
+                    <div class="services-box anim-4">
+                        <i class="fa-solid fa-screwdriver-wrench size main-color"></i>
+                        <h3>Outils de développement</h3>
+                        <img src="assets/images/wakelet.png" alt="Wakelet Icon" class="mini-rect-icon">
+                        <img src="assets/images/feedly.png" alt="Feedly Icon" class="mini-rect-icon">
+                        <p class="services-description">Utilisation de Wakelet, Feedly pour la veille technologique</p>
+                        <img src="assets/images/notion.png" alt="Feedly Icon" class="mini-icon">
+                        <p class="services-description">Utilisation de Notion pour la gestion de projets Agile avec Scrum, MoSCoW, Kanban</p>
+                        <img src="assets/images/figma.png" alt="Figma Icon" class="mini-icon">
+                        <p class="services-description">Utilisation de Figma pour l'intégration de maquettes</p>
+                        <i class="fa-brands fa-git-alt mini-size git"></i>
+                        <i class="fa-brands fa-github mini-size github"></i>
+                        <p class="services-description">Utilisation de Git et Github pour le partage et le versionnage de projets</p>
+                        <img src="assets/images/swagger.png" alt="Swagger Icon" class="mini-icon">
+                        <img src="assets/images/postman.png" alt="Postman Icon" class="mini-icon">
+                        <p class="services-description">Utilisation de Swagger et Postman pour le développement, les tests et la maintenance des API</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-    </section>
+            
+        </section>
 
-    <section class="cl-projects" id="projects">
-        
-    </section>
+        <section class="cl-projects" id="projects">
+            <div class="projects-content">
+                <h3>Mes projets</h3>
+            </div>
+        </section>
 
-    <section class="cl-contact" id="contact-id">
-    
-        <h3>Contactez moi !</h3>
-
-        <div class="mail-copy">
-            <a href="mailto:yannickpriol@orange.fr?subject=Votre%20Objet&body=Votre%20Message">
-                <i class="fa-solid fa-paper-plane"></i>
-            </a>
-            <p id="email-text" class="email-text">yannickpriol@orange.fr</p>
-            <!-- Icône de presse-papiers Font Awesome -->
-            <i id="clipboard-icon" class="fa-regular fa-clipboard"></i>   
-        </div>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/yannick-priol-44835b2b0/" target="_blank" class="icon-style"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://twitter.com/PriolYannick" target="_blank" class="icon-style"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://discord.com/channels/@tchobello" target="_blank" class="icon-style"><i class="fa-brands fa-discord"></i></a>
-        </div>
-    </section>
+        <section class="cl-contact" id="contact-id">
         
-        
-    
-        <!--FOOTER-->
-    
-    <footer>
-        <p>&copy; 2024 Yannick PRIOL | Tous droits réservés.</p>   
-        <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
-    </footer>
+            <h3>Contactez moi !</h3>
 
+            <div class="mail-copy">
+                <a href="mailto:yannickpriol@orange.fr?subject=Votre%20Objet&body=Votre%20Message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </a>
+                <p id="email-text" class="email-text">yannickpriol@orange.fr</p>
+                <!-- Icône de presse-papiers Font Awesome -->
+                <i id="clipboard-icon" class="fa-regular fa-clipboard"></i>   
+            </div>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/yannick-priol-44835b2b0/" target="_blank" class="icon-style"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com/PriolYannick" target="_blank" class="icon-style"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://discord.com/channels/@tchobello" target="_blank" class="icon-style"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </section>
+            
+            
+        
+            <!--FOOTER-->
+        
+        <footer>
+            <p>&copy; 2024 Yannick PRIOL | Tous droits réservés.</p>   
+            <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        </footer>
+    </div>
     
 </body>
 </html>

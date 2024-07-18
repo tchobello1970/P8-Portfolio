@@ -1,3 +1,24 @@
+
+document.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    let currentSection = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 60) { // 60 is the offset for the fixed navbar height
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === currentSection) {
+            link.classList.add('active');
+        }
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const toggleDarkModeBtn = document.getElementById('toggle-dark-mode');
     const toggleLanguageBtn = document.getElementById('toggle-language');
