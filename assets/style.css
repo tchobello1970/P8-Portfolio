@@ -45,9 +45,37 @@ body {
     justify-content: space-between;
 }
 
-h3{
+h3, form > label{
     font-size: 1.2rem;
     padding: 1rem 0 0.5rem 0;
+}
+
+form {
+    max-width: 600px;
+ 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: var(--bg-color2);
+}
+
+label {
+    color: var(--main-color);
+}
+
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    font-size: 1.2rem;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 5px;
+}
+
+.button-container {
+    text-align: right;
 }
 
 p, li{
@@ -461,7 +489,7 @@ section {
 }
 
 .mini-rect-icon {
-    height: 3.2rem;
+    height: 32px;
 }
 
 .size{
@@ -663,7 +691,7 @@ section {
 
 @media (max-width: 768px) {
     .services-container {
-        grid-template-columns: 1fr; /* Une seule colonne en dessous de 768px */
+        grid-template-columns: 1fr;
     }
 
     .services-box {
@@ -768,7 +796,7 @@ section {
 
 /* contact */
 
-.mail-copy {
+.mail-copy, .phone-coords {
     display: flex;
     align-items: center;
 }
@@ -784,6 +812,11 @@ section {
     margin-top: 2rem;
 }
 
+.phone-coords i {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-right: 1rem;  
+}
 
 .mail-copy i,
 .social-links i,
@@ -794,6 +827,7 @@ section {
     font-size: 2rem;
 }
 
+.phone-coords i:hover,
 .mail-copy i:hover,
 .social-links i:hover,
 .mail-copy a:hover,

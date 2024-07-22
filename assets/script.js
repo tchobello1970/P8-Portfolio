@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-
     const hobbiesGrid = document.getElementById('hobbiesGrid');
     const hobbyItems = hobbiesGrid.querySelectorAll('.hobby-item');
 
@@ -61,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (window.innerWidth <= 768) {
             item.addEventListener('click', () => {
-                console.log('item clicked');
                 item.classList.toggle('flipped');
             });
         }
@@ -74,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var mailCopyDiv = document.querySelector('.mail-copy');
 
         document.getElementById('email-text').addEventListener('click', function() {
-        copyToClipboard(mailText.innerText); // adresse mail
+        copyToClipboard(mailText.innerText); 
     });
 
         clipboardIcon.addEventListener('click', function() {
@@ -115,12 +113,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById(modalId).style.display = "block";
     }
     
-    // Fonction pour fermer la fenêtre modale
     function closeModal(modalId) {
         document.getElementById(modalId).style.display = "none";
     }
     
-    // Ajouter des événements aux icônes et aux boutons de fermeture
     document.querySelectorAll('.fa-question-circle').forEach(function(element) {
         element.onclick = function() {
             var modalId = this.getAttribute('data-modal');
@@ -135,13 +131,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Fermer la fenêtre modale lorsque l'utilisateur clique en dehors de celle-ci
     window.onclick = function(event) {
         if (event.target.classList.contains('modal')) {
             closeModal(event.target.id);
         }
     }
 
+    document.querySelector('form').addEventListener('submit', function(event) {
+        if (!validateForm()) {
+            event.preventDefault();
+        }
+    });
 
-} );
+    function validateForm() {
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            alert('Veuillez entrer une adresse email valide.');
+            return false;
+        }
+
+        if (message.length <= 5) {
+            alert('Le message doit contenir plus de 5 caractères et ne doit pas être constitué uniquement d\'espaces.');
+            return false;
+        }
+
+        return true;
+    }
+});
 
