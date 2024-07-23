@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Yannick PRIOL</title>
+    <title>Yannick PRIOL - Portfolio</title>
+	<meta name="description" content="Yannick Priol, développeur web, je réalise des sites et applications utilisant les technologies web récentes et responsives.">
+	<meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="2TwXYduvC7B57L34jusR6PZwI29DLX57roatx8iNuTY">
+
+    <meta property="og:site_name" content="Yannick Priol Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tchobello1970.github.io/P8_Portfolio/">
+    <meta property="og:title" content="Yannick Priol Portfolio">
+    <meta property="og:description" content="Présentation, Compétences, Projets, Contact">
+ 	
+	<meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@monCompteTwitter">
+    <meta name="twitter:title" content="Yannick Priol Portfolio">
+    <meta name="twitter:description" content="Présentation, Compétences, Projets, Contact">
+    <meta name="twitter:url" content="https://tchobello1970.github.io/P8_Portfolio/">   
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -11,14 +27,38 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="assets/style.css">
     <script src="assets/script.js"></script>
+
+    <script type="application/ld+json">
+		{
+		  "@context": "http://schema.org",
+		  "@graph": [
+			{
+			  "@type": "ImageGallery",
+			  "keywords": ["HTML5", "CSS3", "React", "NodeJS"]
+			},
+			{
+			  "@type": "LocalBusiness",
+			  "url": "https://tchobello1970.github.io/P8_Portfolio",
+			  "name": "Yannick Priol Portfolio",
+			  "image": "https://tchobello1970.github.io/OC_P4_Carducci/assets/images/nina.webp",
+			  "priceRange": "200€ 500€",
+			  "telephone": "06 77 13 66 69",
+			  "openingHours":"Mo-Fr 10:00-19:00"
+			},
+			{
+			  "@type": "Service",
+			  "serviceType": ["Frontend", "Backend", "Référencement"]
+			}
+		  ]
+		}
+		</script>
     
 </head>
 
 <body>
-
     <header>
         <div class="header-container">
-            <a href="#" class="logo">Portfolio</a>
+            <a href="#">Portfolio</a>
             <nav class="navbar">
                 <div class="nav-links">
                     <a href="#home" class="active">Accueil</a>
@@ -43,9 +83,9 @@
     <main>
         <section class="cl-home" id="home">
             <div class="home-content">
-                <h2>Bonjour, je m'appelle</h2>
-                <h1>Yannick Priol</h1>
-                <h2>et je suis Développeur Web</h2>
+                <h3>Bonjour, je m'appelle</h3>
+                <h2>Yannick Priol</h2>
+                <h3>et je suis Développeur Web</h3>
                 <p>Bienvenue sur mon portfolio !</p>
                 <div class="social-media">
                     <a href="https://www.linkedin.com/in/yannick-priol-44835b2b0/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -71,7 +111,7 @@
                 <h3>La formation</h3>
                 <ul>
                     <li>Lors du cursus universitaire, beaucoup d'algorithmique, de bases de données en compagnie du Pascal, du C++, de l'ASM68k, du Lisp et du Prolog.</li>
-                    <li>Une formation web pour maîtriser les nouvelles techniques de développement avec de l'HTML, CSS, MySQL, JAvascript, Java...</li>
+                    <li>Une formation web pour maîtriser les nouvelles techniques de développement avec de l'HTML, CSS, MySQL, Javascript, Java...</li>
                     <li>Très récemment, une nouvelle remise à niveau pour développer des sites web responsives et répondre au mieux aux attentes du métier (SEO, Méthode Agile...).</li>
                 </ul>
                 <h3>Mes passions</h3>
@@ -100,7 +140,6 @@
                         <i class="fa-brands fa-sass size rotate sass"></i>
                         <i class="fa-brands fa-js size fade js"></i>
                         <i class="fa-brands fa-react size bounce react"></i>
-                        
                         <h3>Front End</h3>
                         <i class="fa-brands fa-html5 mini-size html5"></i>
                         <i class="fa-brands fa-css3-alt mini-size css3"></i>
@@ -178,8 +217,10 @@
                         <div class="brands">
                             <img src="assets/images/figma.png" alt="Figma Icon" class="mini-icon">
                             <i class="fa-brands fa-html5 mini-size html5" id="html5"></i>
-                            <i class="fa-brands fa-css3-alt mini-size css3" id="css3"></i></div>
+                            <i class="fa-brands fa-css3-alt mini-size css3" id="css3"></i>
+                        </div>
                         <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_booki"></i>
                             <a href="https://github.com/tchobello1970/OC_P2_Booki" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
                             <a href="https://tchobello1970.github.io/OC_P2_Booki/" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
@@ -192,7 +233,9 @@
                         <div class="brands">
                             <i class="fa-brands fa-js mini-size js"></i></div>
                         <div class="links">
-                            <a href="https://github.com/tchobello1970/OC_P3_Bluel" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a></div>
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_bluel"></i>
+                            <a href="https://github.com/tchobello1970/OC_P3_Bluel" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -205,6 +248,7 @@
                             <img src="assets/images/schema-org.png" alt="Schema Icon" class="mini-icon">
                         </div>
                         <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_carducci"></i>
                             <a href="https://github.com/tchobello1970/OC_P4_Carducci" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
                             <a href="https://tchobello1970.github.io/OC_P4_Carducci/" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
@@ -219,6 +263,7 @@
                             <i class="fa-brands fa-sass mini-size sass"></i>
                         </div>
                         <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_kasa"></i>
                             <a href="https://github.com/tchobello1970/kasa" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
                         </div>
                     </div>
@@ -234,6 +279,7 @@
                             <img src="assets/images/postman.png" alt="Postman Icon" class="mini-icon">                           
                         </div>
                         <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_grimoire"></i>
                             <a href="https://github.com/tchobello1970/P6-grimoire-backend" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
                         </div>
                     </div>
@@ -249,6 +295,7 @@
                             <img src="assets/images/figma.png" alt="Figma Icon" class="mini-icon">
                         </div>
                         <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_qwenta"></i>
                             <a href="https://www.notion.so/56c38cf285d245ac8e12fa1e9d72d3fd?v=42a1b0dbf8364edb8067c8d8b4107dcb" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
                     </div>
@@ -263,9 +310,8 @@
                             <i class="fa-brands fa-js mini-size js" id="js"></i>
                         </div>
                         <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_portfolio"></i>
                             <a href="https://github.com/tchobello1970/P8-Portfolio" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
-
-                            
                             <a href="https://miro.com/app/board/uXjVKz10b98=/" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
                     </div>
@@ -293,6 +339,7 @@
                             <i class="fa-brands fa-js mini-size js" id="js"></i>
                         </div>
                         <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_orion"></i>
                             <a href="https://github.com/tchobello1970/OrionDuelHunt" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
                             <a href="https://boardgamearena.com/gamepanel?game=orionduel" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
@@ -324,6 +371,7 @@
                             <i class="fa-brands fa-js mini-size js" id="js"></i>
                         </div>
                         <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_warchest"></i>
                             <a href="https://boardgamearena.com/gamepanel?game=warchest" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
                     </div>
@@ -338,14 +386,96 @@
                             <i class="fa-brands fa-js mini-size js" id="js"></i>
                         </div>
                         <div class="links">
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_dt"></i>
                             <a href="https://boardgamearena.com/gamepanel?game=dungeontwister" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
                     </div>
                 </div>
+                <div id="modal_booki" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_booki">&times;</span>
+                        <h2>Booki - 2024</h2>
+                        <p>L'objectif du projet Booki est d'intégrer l'interface responsive du site avec du code HTML et CSS à partir des maquettes desktop, tablette et mobile réalisées sur Figma tout en respectant les specifications techniques fournies.</p>
+                        <p>Premier projet de la formation, il permet de se familiariser avec l'éditeur Visual Studio Code et le versionning sous Git et Gihub.</p>
+                        <div class="image-container">
+                            <img src="assets/images/booki_1.jpg" alt="booki_1">
+                            <img src="assets/images/booki_2.jpg" alt="booki_2">
+                        </div>
+                        <p>Le projet Booki pose les bases d'un environnement de développement performant et la création d'interfaces web responsives est cruciale dans le développement web moderne.</p>
+                        <div class="logos-container">
+                            <div class="brands">
+                                <img src="assets/images/figma.png" alt="Figma Icon" class="mini-icon">
+                                <i class="fa-brands fa-html5 mini-size html5" id="html5"></i>
+                                <i class="fa-brands fa-css3-alt mini-size css3" id="css3"></i>
+                            </div>
+                            <div class="links">
+                                <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_booki"></i>
+                                <a href="https://github.com/tchobello1970/OC_P2_Booki" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
+                                <a href="https://tchobello1970.github.io/OC_P2_Booki/" target="_blank"><i class="fa-solid fa-link mini-size"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <div id="modal_bluel" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_bluel">&times;</span>
+                        <p>L'objectif du projet Bluel est de créer une page web dynamique pour le site internet d'une architecte d'intérieur en utilisant JavaScript et en communiquant avec une API pour afficher les différents travaux.</p>
+                        <p>Il est également prévu de créer une page de connexion pour l'administrateur du site ainsi qu'une modale permettant d'uploader de nouveaux médias.</p>
+                        <div class="image-container">
+                            <img src="assets/images/bluel_1.jpg" alt="bluel_1">
+                            <img src="assets/images/bluel_2.jpg" alt="bluel_2">
+                        </div>
+                        <p>La création de pages web dynamiques avec JavaScript, la gestion des interactions utilisateurs et la communication avec des APIs complètent les compétences attendues d'un développeur Front-End moderne.</p>
+                        <div class="logos-container">
+                            <div class="brands">
+                                <i class="fa-brands fa-js mini-size js"></i>
+                            </div>
+                            <div class="links">
+                                 <a href="https://github.com/tchobello1970/OC_P3_Bluel" target="_blank"><i class="fa-brands fa-github mini-size github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal_carducci" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_carducci">&times;</span>
+                        <p>Contenu de la fenêtre modale Nina Carducci</p>
+                    </div>
+                </div>   
+                <div id="modal_kasa" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_kasa">&times;</span>
+                        <p>Contenu de la fenêtre modale Kasa</p>
+                    </div>
+                </div>
+                <div id="modal_grimoire" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_grimoire">&times;</span>
+                        <p>Contenu de la fenêtre modale Mon Vieux Grimoire</p>
+                    </div>
+                </div>   
+                <div id="modal_qwenta" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_qwenta">&times;</span>
+                        <p>Contenu de la fenêtre modale qwenta</p>
+                    </div>
+                </div>
+                <div id="modal_portfolio" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_portfolio">&times;</span>
+                        <p>Contenu de la fenêtre modale Portfolio</p>
+                    </div>
+                </div> 
                 <div id="modal_python" class="modal">
                     <div class="modal-content">
                         <span class="close" data-modal="modal_python">&times;</span>
                         <p>Contenu de la fenêtre modale Python</p>
+                    </div>
+                </div>  
+                <div id="modal_orion" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_orion">&times;</span>
+                        <p>Contenu de la fenêtre modale Orion BGA</p>
                     </div>
                 </div>   
                 <div id="modal_linx" class="modal">
@@ -353,12 +483,24 @@
                         <span class="close" data-modal="modal_linx">&times;</span>
                         <p>Contenu de la fenêtre modale Linx</p>
                     </div>
-                </div>                                                                                  
+                </div> 
+                <div id="modal_warchest" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_warchest">&times;</span>
+                        <p>Contenu de la fenêtre modale Champ d'Honneur</p>
+                    </div>
+                </div>   
+                <div id="modal_dt" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-modal="modal_dt">&times;</span>
+                        <p>Contenu de la fenêtre modale Dungeon Twister</p>
+                    </div>
+                </div>                                                  
             </div>
         </section>
         
-        <section class="cl-contact" id="contact-id">
-            <h3>Contactez moi !</h3>
+        <section class="cl-contact" id="contact">
+            <h3>Contactez-moi !</h3>
             <div class="mail-copy">
                 <a href="mailto:yannickpriol@orange.fr?subject=Votre%20Objet&body=Votre%20Message">
                     <i class="fa-solid fa-paper-plane"></i>
@@ -374,10 +516,8 @@
             <form action="https://formspree.io/f/meojoydn" method="post" onsubmit="return validateForm()">
                 <label for="email">Email :</label><br>
                 <input type="email" id="email" name="email" required><br><br>
-                
                 <label for="message">Message :</label><br>
                 <textarea id="message" name="message" rows="7" cols="70" required></textarea><br><br>
-                
                 <div class="button-container">
                     <button type="submit" class="btn">Envoyer</button>
                 </div>
@@ -387,7 +527,6 @@
                 <a href="https://twitter.com/PriolYannick" target="_blank" class="icon-style"><i class="fa-brands fa-twitter"></i></a>
                 <a href="https://discord.com/channels/@tchobello" target="_blank" class="icon-style"><i class="fa-brands fa-discord"></i></a>
             </div>
-
         </section>
                   
         <footer>
