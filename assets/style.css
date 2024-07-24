@@ -9,7 +9,7 @@
 
 :root {
     --bg-color: #e8f2fe;
-    --bg-color2: #34495e;
+    --bg-color2: #e0e0e0;
     --text-color: #333333;
     --main-color: #2980b9;
     --main-color2: #27ae60;
@@ -441,6 +441,7 @@ section {
 
 .mini-rect-icon {
     height: 32px;
+    width: auto;
 }
 
 .size{
@@ -759,7 +760,7 @@ section {
     color: var(--main-color);
     float: right;
     font-size: 2.8rem;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -837,6 +838,10 @@ textarea {
 
 .button-container {
     text-align: right;
+}
+
+button{
+    cursor: pointer;
 }
 
 /* footer */
