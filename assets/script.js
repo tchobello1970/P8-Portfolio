@@ -8,16 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.querySelector('.menu-btn');
     const navLinksContainer = document.querySelector('.nav-links');
     const hobbiesGrid = document.getElementById('hobbiesGrid');
+    const hobbyItems = hobbiesGrid.querySelectorAll('.hobby-item');
     const clipboardIcon = document.getElementById('clipboard-icon');
     const mailText = document.getElementById('email-text');
     const mailCopyDiv = document.querySelector('.mail-copy');
 
-    // Fonction pour mettre à jour les liens de navigation en fonction du défilement
+    /********************************************************************************* 
+    /*
+    /* updateNavLinks
+    /* Fonction pour mettre à jour les liens de navigation en fonction du défilement
+    /*
+    **********************************************************************************/
     const updateNavLinks = () => {
         let currentSection = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (scrollY >= sectionTop - 60) { // 60 est le décalage pour la hauteur de la barre de navigation fixe
+            if (window.scrollY >= section.offsetTop - 60) { 
+                // 60 est le décalage pour la hauteur de la barre de navigation fixe
                 currentSection = section.getAttribute('id');
             }
         });
@@ -27,21 +33,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Fonction pour gérer le mode sombre
+    /********************************************************************************* 
+    /*
+    /* toggleDarkMode
+    /* Fonction pour gérer le mode Sombre
+    /*
+    **********************************************************************************/
     const toggleDarkMode = () => {
         document.body.classList.toggle('dark-mode');
         moonIcon.classList.toggle('hidden');
         sunIcon.classList.toggle('hidden');
     };
 
-    // Fonction pour gérer le menu
+    /********************************************************************************* 
+    /*
+    /* toggleMenu
+    /* Fonction pour gérer l'affichage du menu en mode Mobile
+    /*
+    **********************************************************************************/
     const toggleMenu = () => {
         navLinksContainer.classList.toggle('show');
     };
 
-    // Fonction pour gérer les cartes de loisirs
+    /********************************************************************************* 
+    /*
+    /* initializeHobbies
+    /* initializeHobbies permet d'afficher tous les Hobbies (des cartes recto-verso) à la volée.
+    /* On ajoute le cas responsive pour retourner une carte au clic au lieu du survol
+    /*
+    **********************************************************************************/
     const initializeHobbies = () => {
-        const hobbyItems = hobbiesGrid.querySelectorAll('.hobby-item');
         hobbyItems.forEach(item => {
             const frontImage = item.getAttribute('data-front');
             const backImage = item.getAttribute('data-back');
@@ -65,7 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Fonction pour copier du texte dans le presse-papiers
+    /********************************************************************************* 
+    /*
+    /* copyToClipboard
+    /* copyToClipboard utilise l'API Clipboard de JavaScript pour copier le texte. 
+    /* Elle manipule le DOM pour fournir des retours visuels.
+    /*
+    **********************************************************************************/
     const copyToClipboard = text => {
         navigator.clipboard.writeText(text)
             .then(() => {
@@ -90,24 +117,40 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     };
 
-    // Fonction pour ouvrir une modale
+    /********************************************************************************* 
+    /*
+    /* openModal
+    /* openModal ouvre la modale au clic sur l'icone dédié.
+    /*
+    **********************************************************************************/
     const openModal = modalId => {
         const modal = document.getElementById(modalId);
-        if (modal) modal.style.display = 'block';
+        if (modal) 
+            modal.style.display = 'block';
     };
 
-    // Fonction pour fermer une modale
+    /********************************************************************************* 
+    /*
+    /* closeModal
+    /* closeModal ferme la modale au clic sur l'icone dédié ou à l'extérieur de la modale.
+    /*
+    **********************************************************************************/
     const closeModal = modalId => {
         const modal = document.getElementById(modalId);
         if (modal) modal.style.display = 'none';
     };
 
-    // Fonction de validation de formulaire
+    /********************************************************************************* 
+    /*
+    /* validateForm
+    /* validateForm vérifie si le contenu des champs est valide.
+    /*
+    **********************************************************************************/
     const validateForm = () => {
         const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value.trim();
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+        const message = document.getElementById('message').value.trim();
+        
         if (!emailPattern.test(email)) {
             alert('Veuillez entrer une adresse email valide.');
             return false;
@@ -121,14 +164,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     };
 
-    // Ajouter les écouteurs d'événements
+      /********************************************************************************* 
+    /*
+    /* Ecouteurs d'évenements.
+    /* Initialisations.
+    /*
+    **********************************************************************************/
     document.addEventListener('scroll', updateNavLinks);
-    toggleDarkModeBtn && toggleDarkModeBtn.addEventListener('click', toggleDarkMode);
-    menuBtn && menuBtn.addEventListener('click', toggleMenu);
-    hobbiesGrid && initializeHobbies();
-    clipboardIcon && clipboardIcon.addEventListener('click', () => copyToClipboard(mailText.innerText));
-    mailText && mailText.addEventListener('click', () => copyToClipboard(mailText.innerText));
-
+    
     document.querySelectorAll('.fa-question-circle').forEach(element => {
         element.addEventListener('click', () => openModal(element.getAttribute('data-modal')));
     });
@@ -148,4 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
         }
     });
+
+    toggleDarkModeBtn && toggleDarkModeBtn.addEventListener('click', toggleDarkMode);
+    menuBtn && menuBtn.addEventListener('click', toggleMenu);
+    hobbiesGrid && initializeHobbies();
+    clipboardIcon && clipboardIcon.addEventListener('click', () => copyToClipboard(mailText.innerText));
+    mailText && mailText.addEventListener('click', () => copyToClipboard(mailText.innerText));
 });
