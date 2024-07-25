@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 
 * {
@@ -65,6 +65,8 @@ p, li{
 .hidden {
     display: none;
 }
+
+/* header part */
 
 header {
     width: 100%;
@@ -163,6 +165,8 @@ header {
         display: flex;
     }
 }
+
+/* main section */
 
 main {
     width: 100%;
@@ -347,20 +351,11 @@ section {
     transform: rotateY(180deg);
 }
 
-/* Desktop: flip on hover */
 @media (min-width: 769px) {
     .hobby-item:hover .flip-card-inner {
         transform: rotateY(180deg);
     }
 }
-
-/* Tablet and mobile: flip on click */
-@media (max-width: 768px) {
-    .hobby-item.flipped .flip-card-inner {
-        transform: rotateY(180deg);
-    }
-}
-
 
 @media (max-width: 768px) {
     .about-hobbies {
@@ -370,7 +365,11 @@ section {
 
     .hobbies-grid {
         grid-template-columns: repeat(2, 1fr);
-    }   
+    } 
+
+    .hobby-item.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
 }
 
 /* compétences part */
@@ -397,7 +396,6 @@ section {
     text-align: center;
     border: .2rem solid var(--bg-color);
     border-color: var(--main-color);
-
 }
 
 .anim{
@@ -699,7 +697,9 @@ section {
 .fa-question-circle {
     cursor: pointer;
 }
+
 /* modals */
+
 .modal {
     display: none;
     position: fixed; 
@@ -775,12 +775,11 @@ section {
 
 /* contact */
 
-
-
 .mail-copy, .phone-coords {
     display: flex;
     align-items: center;
 }
+
 .email-text {
     cursor: pointer;
     margin: 0 1rem;
@@ -816,7 +815,6 @@ section {
     color: var(--main-color);
 }
     
-
 form {
     max-width: 600px;
      padding: 20px;
@@ -829,8 +827,7 @@ label {
     color: var(--main-color);
 }
 
-input[type="email"],
-textarea {
+input[type="email"], textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0 20px 0;
@@ -849,6 +846,7 @@ button{
 }
 
 /* footer */
+
 footer {
     display: flex;
     justify-content: space-between;

@@ -123,10 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
     /* openModal ouvre la modale au clic sur l'icone dédié.
     /*
     **********************************************************************************/
-    const openModal = modalId => {
+
+    const openModal = (modalId) => {
         const modal = document.getElementById(modalId);
-        if (modal) 
+        if (modal) {
             modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            // Transférer le focus à la modale
+            modal.querySelector('.close').focus();
+            // Enregistrer le dernier élément focusé pour la restauration
+            lastFocus = document.activeElement;
+        }
     };
 
     /********************************************************************************* 
@@ -135,9 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
     /* closeModal ferme la modale au clic sur l'icone dédié ou à l'extérieur de la modale.
     /*
     **********************************************************************************/
-    const closeModal = modalId => {
+    const closeModal = (modalId) => {
         const modal = document.getElementById(modalId);
-        if (modal) modal.style.display = 'none';
+        if (modal) {
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            // Restaurer le focus à l'élément qui a ouvert la modale
+            if (lastFocus) lastFocus.focus();
+        }
     };
 
     /********************************************************************************* 
@@ -185,6 +197,16 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal(event.target.id);
         }
     });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            const openModal = document.querySelector('.modal[aria-hidden="false"]');
+            if (openModal) {
+                closeModal(openModal.id);
+            }
+        }
+    });
+
 
     document.querySelector('form')?.addEventListener('submit', event => {
         if (!validateForm()) {

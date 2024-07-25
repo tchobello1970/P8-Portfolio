@@ -247,7 +247,7 @@
                             <i class="fa-brands fa-css3-alt mini-size css3" id="css3"></i>
                         </div>
                         <div class="links">
-                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_booki"></i>
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_booki" role="button" tabindex="0"></i>
                             <a href="https://github.com/tchobello1970/OC_P2_Booki" target="_blank" aria-label="Voir le code sur Github"><i class="fa-brands fa-github mini-size github"></i></a>
                             <a href="https://tchobello1970.github.io/OC_P2_Booki/" target="_blank" aria-label="Voir le site"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
@@ -260,7 +260,7 @@
                         <div class="brands">
                             <i class="fa-brands fa-js mini-size js"></i></div>
                         <div class="links">
-                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_bluel"></i>
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_bluel" role="button" tabindex="0"></i>
                             <a href="https://github.com/tchobello1970/OC_P3_Bluel" target="_blank" aria-label="Voir le code sur Github"><i class="fa-brands fa-github mini-size github"></i></a>
                         </div>
                     </div>
@@ -275,7 +275,7 @@
                             <img src="assets/images/schema-org.webp" alt="Schema Icon" class="mini-icon">
                         </div>
                         <div class="links">
-                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_carducci"></i>
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_carducci" role="button" tabindex="0"></i>
                             <a href="https://github.com/tchobello1970/OC_P4_Carducci" target="_blank" aria-label="Voir le code sur Github"><i class="fa-brands fa-github mini-size github"></i></a>
                             <a href="https://tchobello1970.github.io/OC_P4_Carducci/" target="_blank" aria-label="Voir le site"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
@@ -290,7 +290,7 @@
                             <i class="fa-brands fa-sass mini-size sass"></i>
                         </div>
                         <div class="links">
-                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_kasa"></i>
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_kasa" role="button" tabindex="0"></i>
                             <a href="https://github.com/tchobello1970/kasa" target="_blank" aria-label="Voir le code sur Github"><i class="fa-brands fa-github mini-size github"></i></a>
                             <a href="https://tchobello1970.github.io/kasa/" target="_blank" aria-label="Voir le site"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
@@ -307,7 +307,7 @@
                             <img src="assets/images/postman.webp" alt="Postman Icon" class="mini-icon">                           
                         </div>
                         <div class="links">
-                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_grimoire"></i>
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_grimoire" role="button" tabindex="0"></i>
                             <a href="https://github.com/tchobello1970/P6-grimoire-backend" target="_blank" aria-label="Voir le code sur Github"><i class="fa-brands fa-github mini-size github"></i></a>
                         </div>
                     </div>
@@ -323,7 +323,7 @@
                             <img src="assets/images/figma.webp" alt="Figma Icon" class="mini-icon">
                         </div>
                         <div class="links">
-                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_qwenta"></i>
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_qwenta" role="button" tabindex="0"></i>
                             <a href="https://www.notion.so/56c38cf285d245ac8e12fa1e9d72d3fd?v=42a1b0dbf8364edb8067c8d8b4107dcb" target="_blank" aria-label="Voir le site Notion"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
                     </div>
@@ -351,7 +351,7 @@
                             <img src="assets/images/python.webp" alt="Python Icon" class="mini-icon python">
                         </div>
                         <div class="links">
-                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_python"></i>
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_python" role="button" tabindex="0"></i>
                         </div>
                     </div>
                 </div> 
@@ -365,7 +365,7 @@
                             <i class="fa-brands fa-js mini-size js" id="js"></i>
                         </div>
                         <div class="links">
-                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_orion"></i>
+                            <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_orion" role="button" tabindex="0"></i>
                             <a href="https://github.com/tchobello1970/OrionDuelHunt" target="_blank" aria-label="Voir le code sur Github"><i class="fa-brands fa-github mini-size github"></i></a>
                             <a href="https://boardgamearena.com/gamepanel?game=orionduel" target="_blank" aria-label="Voir le site BGA"><i class="fa-solid fa-link mini-size"></i></a>
                         </div>
@@ -414,9 +414,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="modal_booki" class="modal">
+
+                <div id="modal_booki" class="modal"role="dialog" aria-labelledby="modal_booki" aria-hidden="true">
                     <div class="modal-content">
-                        <span class="close" data-modal="modal_booki">&times;</span>
+                        <span class="close" aria-label="Close modal" data-modal="modal_booki">&times;</span>
                         <h2>Booki - 2024</h2>
                         <p>L'objectif du projet Booki est d'intégrer l'interface responsive du site avec du code HTML et CSS à partir des maquettes desktop, tablette et mobile réalisées sur Figma tout en respectant les specifications techniques fournies.</p>
                         <p>Premier projet de la formation, il permet de se familiariser avec l'éditeur Visual Studio Code et le versionning sous Git et Gihub.</p>
@@ -433,16 +434,16 @@
                                 <i class="fa-brands fa-css3-alt mini-size css3" id="css3"></i>
                             </div>
                             <div class="links">
-                                <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_booki"></i>
+                                <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_booki" role="button" tabindex="0"></i>
                                 <a href="https://github.com/tchobello1970/OC_P2_Booki" target="_blank" aria-label="Voir le code sur Github"><i class="fa-brands fa-github mini-size github"></i></a>
                                 <a href="https://tchobello1970.github.io/OC_P2_Booki/" target="_blank" aria-label="Voir le site"><i class="fa-solid fa-link mini-size"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>   
-                <div id="modal_bluel" class="modal">
+                <div id="modal_bluel" class="modal"role="dialog" aria-labelledby="modal_bluel" aria-hidden="true">
                     <div class="modal-content">
-                        <span class="close" data-modal="modal_bluel">&times;</span>
+                        <span class="close" aria-label="Close modal" data-modal="modal_bluel">&times;</span>
                         <h2>Bluel - 2024</h2>
                         <p>L'objectif du projet Bluel est de créer une page web dynamique pour le site internet d'une architecte d'intérieur en utilisant JavaScript et en communiquant avec une API pour afficher les différents travaux.</p>
                         <p>Il est également prévu de créer une page de connexion pour l'administrateur du site ainsi qu'une modale permettant d'uploader de nouveaux médias.</p>
@@ -461,9 +462,9 @@
                         </div>
                     </div>
                 </div>
-                <div id="modal_carducci" class="modal">
+                <div id="modal_carducci" class="modal"role="dialog" aria-labelledby="modal_carducci" aria-hidden="true">
                     <div class="modal-content">
-                        <span class="close" data-modal="modal_carducci">&times;</span>
+                        <span class="close" aria-label="Close modal" data-modal="modal_carducci">&times;</span>
                         <h2>Nina Carducci - 2024</h2>
                         <p>L'objectif du projet Carducci est d'identifier les problèmes de chargement et de référencement du site de Nina Carducci avec les outils LightHouse et Wave.</p>
                         <p>Pour cela, on va modifier le code, optimiser la taille des images et corriger les bugs grâce aux DevTools.</p>
@@ -481,16 +482,16 @@
                                 <img src="assets/images/schema-org.webp" alt="Schema Icon" class="mini-icon">
                             </div>
                             <div class="links">
-                                <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_carducci"></i>
+                                <i class="fa fa-question-circle mini-size" aria-hidden="true" data-modal="modal_carducci" role="button" tabindex="0"></i>
                                 <a href="https://github.com/tchobello1970/OC_P4_Carducci" target="_blank" aria-label="Voir le code sur Github"><i class="fa-brands fa-github mini-size github"></i></a>
                                 <a href="https://tchobello1970.github.io/OC_P4_Carducci/" target="_blank" aria-label="Voir le site"><i class="fa-solid fa-link mini-size"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>   
-                <div id="modal_kasa" class="modal">
+                <div id="modal_kasa" class="modal"role="dialog" aria-labelledby="modal_kasa" aria-hidden="true">
                     <div class="modal-content">
-                        <span class="close" data-modal="modal_kasa">&times;</span>
+                        <span class="close" aria-label="Close modal" data-modal="modal_kasa">&times;</span>
                         <h2>Kasa - 2024</h2>
                         <p>L'objectif du projet Kasa est d'implémenter le front-end d’une application en utilisant React et React Router pour créer une expérience utilisateur moderne et réactive.</p>
                         <p>Pour cela, on utilisera des animations css et le code sera développé en Sass.</p>
@@ -513,9 +514,9 @@
                         </div>
                     </div>
                 </div>
-                <div id="modal_grimoire" class="modal">
+                <div id="modal_grimoire" class="modal"role="dialog" aria-labelledby="modal_grimoire" aria-hidden="true">
                     <div class="modal-content">
-                        <span class="close" data-modal="modal_grimoire">&times;</span>
+                        <span class="close" aria-label="Close modal" data-modal="modal_grimoire">&times;</span>
                         <h2>Mon vieux grimoire - 2024</h2>
                         <p>L'objectif du projet Mon Vieux Grimoire est de créer un serveur avec Express et de le connecter à une base de données MongoDB.</p>
                         <p>Il faut développer les modèles de données et implémenter les opérations CRUD pour la gestion sécurisée des livres et des notations.</p>
@@ -540,9 +541,9 @@
                         </div>
                     </div>
                 </div>   
-                <div id="modal_qwenta" class="modal">
+                <div id="modal_qwenta" class="modal"role="dialog" aria-labelledby="modal_qwenta" aria-hidden="true">
                     <div class="modal-content">
-                        <span class="close" data-modal="modal_qwenta">&times;</span>
+                        <span class="close" aria-label="Close modal" data-modal="modal_qwenta">&times;</span>
                         <h2>Qwenta - 2024</h2>
                         <p>L'objectif du projet Qwenta est la planification du développement du site web à partir de la maquette, des spécifications fonctionnelles et des User Stories du site.</p>
                         <p>A partir de la veille technologique, il faut réaliser les spécifications techniques, découper le projet en tâches et réaliser un tableau Kanban sous Notion.</p>
@@ -568,9 +569,9 @@
 
                     </div>
                 </div>
-                <div id="modal_python" class="modal">
+                <div id="modal_python" class="modal"role="dialog" aria-labelledby="modal_python" aria-hidden="true">
                     <div class="modal-content">
-                        <span class="close" data-modal="modal_python">&times;</span>
+                        <span class="close" aria-label="Close modal" data-modal="modal_python">&times;</span>
                         <h2>Remue Méninges - 2014</h2>
                         <p>L'objectif du projet est d'apprendre le langage Python en réalisant une application autour du jeu Dungeon Twister et ses Remue-Méninges.</p>
                         <p>Un remue-méninges est un problème à résoudre et l'application va permettre de placer les salles, marqueurs et pions. Elle va générer aussi un fichier texte et un fichier image avec tous les éléments qui pourra être chargé ensuite.</p>
@@ -583,9 +584,9 @@
                         <p>C'est une première étape et l'objectif suivant est l'apprentissage du framework Django.</p>
                     </div>
                 </div>  
-                <div id="modal_orion" class="modal">
+                <div id="modal_orion" class="modal"role="dialog" aria-labelledby="modal_orion" aria-hidden="true">
                     <div class="modal-content">
-                        <span class="close" data-modal="modal_orion">&times;</span>
+                        <span class="close" aria-label="Close modal" data-modal="modal_orion">&times;</span>
                         <h2>Orion Duel - 2023</h2>
                         <p>Orion Duel est un jeu de connexion dans lequel on place des pièces souvent bicolores. Le but est de relier 2 constellations, connecter 4 galaxies ou connecter 3 trous noirs chez l'adversaire.</p>
                         <p>La recherche de conditions victorieuses se fait par des parcours d'arbre en profondeur.</p>
