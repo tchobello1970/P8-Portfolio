@@ -50,16 +50,16 @@ body {
 }
 
 h2{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 h3, form > label{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 0.5rem 0;
 }
 
 p, li{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .hidden {
@@ -180,7 +180,7 @@ main {
 }
 
 section {
-    min-height: 70vh;
+    min-height: 40vh;
     height: auto;
     padding: 10rem 4% 2rem;
 }
@@ -194,6 +194,7 @@ section {
     align-items: center;
     padding: 5rem 2rem;
     text-align: center;
+    gap: 20%;
 }
 
 
@@ -651,8 +652,8 @@ section {
 .projects-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    align-items: center;
     gap: 2.5rem;
+    justify-content: center;
 }
 
 .card {
@@ -774,6 +775,35 @@ section {
 }
 
 /* contact */
+
+
+.cl-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.coords-container, form {
+    width: 100%;
+    
+}
+
+@media (min-width: 768px) {
+    .cl-contact {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .coords-container,
+    form {
+        width: 60%;
+        padding: 0 10rem;
+    }
+
+    form {
+        margin-left: auto;
+    }
+}
 
 .mail-copy, .phone-coords {
     display: flex;
